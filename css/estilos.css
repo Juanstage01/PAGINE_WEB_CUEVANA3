@@ -1,0 +1,49 @@
+:root{
+    --colorfondo:#030321;
+    --resaltar:#ffff00;
+    --negro:#000;
+    --fontblanco:#fff;
+}
+/*  RESET CSS  */
+
+    html,body,h1,h2,h3,h4,h5,h6,p,ol,ul,li,pre,code,var,form,fieldset,blockquote{
+        margin:0;
+        padding:0;
+        font-size:100%;
+        font-weight:normal;
+    }
+    /* table{ border-collapse:collapse; border-spacing:0;}
+    td,th,caption{font-weight:normal; text-align: left;}
+    img,fieldset{border:0;}
+    ul{padding-left:1.4em; list-style: decimal;}
+    ol{padding-left:1.4em; list-style: square;} */
+    /* q:before, q:after {content:'';} */
+    
+/*  FIN DE RESET  -------------------------------------------------------------------------------------------------------FIN DE RESET*/
+body{
+    background:var(--colorfondo);
+}
+header{
+    width:100%;
+    height:110px;
+    background:var(--negro);
+    position:fixed;
+}
+header nav{
+    position:relative;
+    top:30%;
+    left:30%;
+}
+header nav ul li{
+    float:left;
+    list-style:none;
+    font-size:1.2em;
+}
+header nav ul li a{
+    text-decoration:none;
+    float:left;
+    padding:10px;
+    margin-right:28px;
+    background:var(--colorfondo);
+    color:var(--fontblanco);
+}
