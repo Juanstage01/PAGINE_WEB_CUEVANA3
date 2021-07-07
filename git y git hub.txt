@@ -1,0 +1,41 @@
+git init
+git add
+git add .
+git commit
+git commit -am "parrafo" //agrega todo
+
+git status -s 
+git commit -m "Comienzo del proyecto"
+
+git config --global user.username "JUAN"
+git config --global user.email "jdancr@hotmail.com"
+username=Juan
+email=JDANCR@HOTMAIL.COM
+
+git log --oneline
+git reset --hard (codigo instantanea)
+
+git commit --amend       (vim)
+    :i 
+    :wq
+juanstage01
+githublcdubteeld2025
+
+git remote add origin https://github.com/Juanstage01/cursoGIT.git
+git push -u origin main
+git push origin master
+git pull
+git pull request //
+
+git tag 15-09-20v1 -m "version 1 del proyecto"
+git push --tags
+git clone (url) (code de la pagina github)
+
+git branch (javascript)
+git branch 
+git checkout (javascript)
+
+git merge javascript
+git branch -d (Diseñador1)
+
+fork(pull request)
