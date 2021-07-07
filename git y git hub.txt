@@ -20,6 +20,7 @@ git commit --amend       (vim)
     :wq
 juanstage01
 githublcdubteeld2025
+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
 
 git remote add origin https://github.com/Juanstage01/cursoGIT.git
 git push -u origin main
