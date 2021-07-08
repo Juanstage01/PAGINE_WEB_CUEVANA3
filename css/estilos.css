@@ -3,6 +3,7 @@
     --resaltar:#ffff00;
     --negro:#000;
     --fontblanco:#fff;
+    --ciconin:#00ffff;
 }
 /*  RESET CSS  */
 
@@ -29,9 +30,41 @@ header{
     background:var(--negro);
     position:fixed;
 }
+header div{
+    position:absolute;
+    top:20px;
+    left:150px;
+    width:70px;
+    height:70px;
+    background: radial-gradient(circle at 33% 100%,#73f3f3 1%, var(--ciconin) 30%);
+    border-radius: 50%;
+    position:relative;
+}
+header div:before{
+    content: '';
+    display:inline;
+    position:absolute;
+    top:15px;
+    left:10px;
+    background:var(--ciconin);
+    border-right:20px solid transparent;
+    border-left:20px solid var(--fontblanco);   
+    border-top:20px solid transparent;   
+    border-bottom:20px solid transparent;   
+}
+header div:after{
+    content: 'cuevana 3';
+    font: bold 1.8em verdana;
+    color:var(--fontblanco);
+    position:absolute;
+    left:70px;
+    top:10px;
+    width:300px;
+}
+
 header nav{
     position:relative;
-    top:30%;
+    top:-25%;
     left:30%;
 }
 header nav ul li{
@@ -46,4 +79,183 @@ header nav ul li a{
     margin-right:28px;
     background:var(--colorfondo);
     color:var(--fontblanco);
+}
+#cartelera{
+    width:100%;
+    height:600px;
+    background:var(--resaltar);
+    margin-top:10px;
+}
+#main1{
+    background:red;
+    width:80%;
+    height:3300px;
+    margin: auto;
+}
+#miniseccion{
+    width:70%;
+    height:100%;
+    background:var(--resaltar);
+    /* margin-left:140px; */
+    float:left;
+}
+aside{
+    margin-left:30px;
+    height:70%;
+    width:27%;
+    background:var(--resaltar);
+    /* position:relative;  */
+    /* left:788px;  */
+    display:inline-block;
+}
+#episodios{
+    width:100%;
+    height:300px;
+    background: var(--ciconin);
+}
+section div div div h2{
+    color:var(--fontblanco);
+    font-size:2.2em;
+    font-weight:bold;
+}
+section div div div nav{
+    margin-top:10px;
+}
+section div div div nav ul li{
+    list-style:none;
+    float:left;
+    font-size:1em;
+}
+section div div div nav ul li h2{
+    color:var(--fontblanco);
+    font-size:2.2em;
+    font-weight:bold;
+}
+section div div div nav ul li a{
+    text-decoration:none;
+    float:left;
+    padding:10px;
+    margin-right:10px;
+    background:var(--colorfondo);
+    color:var(--fontblanco);
+}
+section div div div div table tr td figure{
+    width:165px;
+    height:260px;
+}
+section div div div div table tr td figure img{
+    border-radius:2%;
+
+}
+.bold{
+    font-weight: bold;
+}
+#imagenes{
+    margin-top:40px;
+}
+.muestra_pelis{
+    text-align:center;
+    font-weight: bold;
+    margin-right:20px;
+    margin-left:0px;
+}
+#mostrar_mas{
+    width:100%;
+    border-radius: 10%;
+    background:var(--ciconin);
+    color:var(--fontblanco);
+    font-size:1.8em;
+}
+#series_online{
+    background: var(--resaltar);
+    width: 100%;
+    height:400px;
+}
+section div aside figure{
+    margin:0px;
+    padding:0px;
+    width:400px;
+
+}
+section div aside figure img{
+    clear:both;
+    width:300px;
+    height:300px;
+    margin:0px;
+    padding:0px;
+}
+/* section div aside figure figcaption{
+    text-align:center;
+} */
+/* section div aside figure{
+    float:left;
+} */
+#anuncio_idioma{
+    width:300px;
+    padding:20px;
+    margin-top:40px;
+    background:var(--colorfondo);
+    color:var(--fontblanco);
+}
+section div aside ul li {
+    list-style: none;
+}
+section div aside ul li figure a{
+    float:left;
+    margin:20px;
+}
+section div aside ul li figure a img{
+    width:50px;
+    height:30px;
+}
+#anuncio_top_estrenos{
+    margin-top:30px;
+    width:300px;
+    padding:20px;
+    background:var(--colorfondo);
+    color:var(--fontblanco);
+}
+.container_base{
+    background: var(--ciconin);
+    width:292px;
+    height:150px;
+}
+.container_over{
+    background:#000;
+    width:100px;
+    height:100px;
+}
+section div aside div figure a img{
+    width:88px;
+    height:130px;
+    float:left;
+    border-radius:5%;
+}
+section div aside div figure a figcaption{
+    float:left;
+    margin:20px;
+}
+section div aside div div p{
+    margin-left:120px;
+    font:20px bold sans-serif;
+    word-spacing: 15px;
+    
+}
+section div aside div div p span{
+    font-size:25px;
+}
+.preferencia{
+    padding:20px;
+    margin:10px;
+    background: var(--colorfondo);
+    color:var(--fontblanco);
+}
+section div footer{
+    background:tomato;
+    width:100%;
+    height:100px;
+    clear:both;
+}
+footer p{
+    font:30px;
 }
