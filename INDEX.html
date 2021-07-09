@@ -7,6 +7,51 @@
     <title>Cuevana 3|Todas las peliculas aqui</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <script src="js/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="js/jquery.slides.js"></script>
+    <script>
+        $(document).ready(function(){
+        //     $("#radio1").mouseover(move)
+        //     $("#radio2").mouseover(move2)
+                
+        $(function(){
+  $("#episodios").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 5000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: false,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: true,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+        
+        });
+        // function change(num){
+            
+        // }
+        // function move(){
+        //     $(".slider ul").css("margin-left","-100%");
+        // }
+        // function move2(){
+        //     $(".slider ul").css("margin-left","-100%");
+
+        // }
+       
+    
+    </script>
+    
+
 </head>
 <body>
     <header>
@@ -24,9 +69,32 @@
             </tr></table>
         </nav>
     </header>
-    <div id="cartelera">
-        <h2>Cartelera</h2>
+    <div class="slider">
+        
+        <div class="slides">
+            <ul>
+                <li class="slide first"><a href="#"><img src="imagenes/p1.jpg" alt="cartelera"/></a></li>
+                <li class="slide"><a href="#"><img src="imagenes/p2.jpg" alt="cartelera"/></a></li>
+                <li class="slide"><a href="#"><img src="imagenes/p3.jpg" alt="cartelera"/></a></li>
+                <li class="slide"><a href="#"><img src="imagenes/p4.jpg" alt="cartelera"/></a></li>
+            </ul>
+           
+            
+        </div>
     </div>
+    <div class="navegacion">
+        <input type="radio" name="radio_btn" id="radio1" onclick="change(1);">
+        <input type="radio" name="radio_btn" id="radio2" onclick="change(2);"> 
+        <input type="radio" name="radio_btn" id="radio3" onclick="change(3);">
+        <input type="radio" name="radio_btn" id="radio4" onclick="change(4);">
+    </div>
+    <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+    </div>
+
     
     <section type="wrapper">
         <section type="main">
@@ -37,7 +105,10 @@
         <div id="main1">
             <div id="miniseccion">
                 <div id="episodios">
-                    <h2>Episodios</h2>
+                    <!-- <h2>Episodios</h2> -->
+                    <img src="http://lorempixel.com/1600/900/city/1" alt="">
+                    <img src="http://lorempixel.com/1600/900/city/2" alt="">
+                    <img src="http://lorempixel.com/1600/900/city/3" alt="">
                 </div>
                 <div id="peliculas_online">
                     <nav>
@@ -53,10 +124,46 @@
                     <div id="imagenes">
                         <table>
                             <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/business/1" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/sports/2" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nature/3" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/4" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/people/10" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/fashion/4" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/city/7" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/8" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/abstract/7" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/9" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/10" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/2" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/1" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/3" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/5" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/6" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/abstract/4" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/abstract/3" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/abstract/2" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/abstract/1" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                            </tr>
+                            <tr>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/sports/5" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/sports/3" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/sports/2" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/sports/1" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
                             </tr>
                             <tr>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
@@ -66,50 +173,14 @@
                             </tr>
                             <tr>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/city/5" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/fashion/6" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
                             </tr>
                             <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/business/5" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
-                            </tr>
-                            <tr>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p2.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
-                                <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p3.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
+                                <td><figure class="muestra_pelis"><a href="#"><img src="http://lorempixel.com/400/200/people/10" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>
                                 <td><figure class="muestra_pelis"><a href="#"><img src="imagenes/p4.jpg" alt="imagen" width="180px" height="260px"/><figcaption>Pel&iacute;cula</figcaption></a></figure></td>                                                  
                             </tr>
                         </table>
@@ -145,17 +216,17 @@
                 </footer> 
             </div>
             <aside>
-                <figure class="peli_aside"><a href="#"><img src="imagenes/p4.jpg" alt="imagen"/><figcaption></figcaption></a></figure>
+                <figure class="peli_aside"><a href="#"><img src="http://lorempixel.com/400/200/nightlife/9" alt="imagen"/><figcaption></figcaption></a></figure>
                 
                 <input type="search" value="FILTRAR PELICULAS POR IDIOMA" id="anuncio_idioma">
             
                 <ul>
                     <li>
-                <figure class="idioma1"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="10px" height="10px" id="frances" name="frances"/><figcaption></figcaption></a></figure>
+                <figure class="idioma1"><a href="#"><img src="imagenes/mexico.png" alt="imagen" width="10px" height="10px" id="frances" name="frances"/><figcaption></figcaption></a></figure>
                 <!-- </td><td> --></li><li>
-                <figure class="idioma2"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="10px" height="10px" id="ingles" name="ingles"/><figcaption></figcaption></a></figure>
+                <figure class="idioma2"><a href="#"><img src="imagenes/usa.png" alt="imagen" width="10px" height="10px" id="ingles" name="ingles"/><figcaption></figcaption></a></figure>
                 <!-- </td><td> --></li><li>
-                <figure class="idioma3"><a href="#"><img src="imagenes/p1.jpg" alt="imagen" width="10px" height="10px" id="español" name="español"/><figcaption></figcaption></a></figure>
+                <figure class="idioma3"><a href="#"><img src="imagenes/españa.jpg" alt="imagen" width="10px" height="10px" id="español" name="español"/><figcaption></figcaption></a></figure>
                     </li>
                 </ul>
 
@@ -226,11 +297,6 @@
                     <div class="contaner_over"><p><span>4.5</span>/5  3h 2019</p></div>
                 </div>
                 <input type="search" value="USUARIOS DESTACADOS" id="anuncio_top_estrenos">
-
-
-                
-                
-                                 
             </aside>
 
             

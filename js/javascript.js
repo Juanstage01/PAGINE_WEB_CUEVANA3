@@ -1,0 +1,1 @@
+var radio1=document.getElementById("radio1").Value;

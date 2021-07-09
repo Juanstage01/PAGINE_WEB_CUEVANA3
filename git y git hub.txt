@@ -7,7 +7,7 @@ git commit -am "parrafo" //agrega todo
 git status -s 
 git commit -m "Comienzo del proyecto"
 
-git config --global user.username "JUAN"
+git config --global user.username "JUAN DANIEL"
 git config --global user.email "jdancr@hotmail.com"
 username=Juan
 email=JDANCR@HOTMAIL.COM
@@ -21,6 +21,7 @@ git commit --amend       (vim)
 juanstage01
 githublcdubteeld2025
 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
+    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
 
 git remote add origin https://github.com/Juanstage01/cursoGIT.git
 git push -u origin main
